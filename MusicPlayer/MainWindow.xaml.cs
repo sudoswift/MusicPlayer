@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Threading;
 
-namespace MediaPlayerSample
+namespace MusicPlayer
 {
     public partial class MainWindow : Window
     {
@@ -20,7 +20,7 @@ namespace MediaPlayerSample
             InitializeComponent();
             volumeSlider.Maximum = 100.0;
             volumeSlider.Minimum = 0.0;
-            volumeSlider.Value = 50.0;
+            volumeSlider.Value = 30.0;
 
             if (filePath == null)
             {
@@ -52,7 +52,6 @@ namespace MediaPlayerSample
         {
             volumeSlider.Maximum = 100.0;
             volumeSlider.Minimum = 0;
-
             MusicPlayer.Volume = volumeSlider.Value / 100.0;
             volumeLabel.Content = "Volume : " + (int)volumeSlider.Value;
         }
